@@ -14,11 +14,17 @@ services:
       - ./src:/src
       - ./package.json:/package.json
       - ./yarn.lock:/yarn.lock
-
+    external_links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
 volumes:
-  mysql_volume:
-    name: mysql-production-volume
+  data:
+
 
 networks:
-  kiso_network:
+  demo_nestjs_net_work:
     external: true

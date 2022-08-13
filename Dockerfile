@@ -6,3 +6,5 @@ RUN yarn install --network-concurrency 1
 COPY . .
 
 RUN yarn build
+
+CMD ["yarn", "start"]
