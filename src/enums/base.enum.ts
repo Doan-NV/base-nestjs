@@ -5,4 +5,5 @@ export enum StatusEnum {
 
 export enum RequestHeadersEnum {
   Authorization = 'Authorization',
+
 }
